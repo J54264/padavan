@@ -66,7 +66,7 @@ on:
         - ZTE-E8820S
         - ZTE-E8820V2
         - ZTT-RX6000
-        default: K2P
+        default: RM2100
       toolchain:
         description: 'Select the compilation toolchain'
         required: true
@@ -103,7 +103,7 @@ on:
         description: 'String JSON list of plug-ins'
         required: true
         type: string
-        default: '{"ss":"y","v2ray":"n","xray":"y","trojan":"y","ssobfs":"y","smartdns":"y","vlmcsd":"y","ttyd":"n","iperf3":"n"}'
+        default: '{"ss":"n","v2ray":"n","xray":"n","trojan":"n","ssobfs":"n","smartdns":"y","vlmcsd":"y","ttyd":"n","iperf3":"n"}'
       customization:
         description: 'String JSON list of Customization'
         required: true
@@ -122,9 +122,9 @@ on:
         description: 'Delete old workflow runs'
         default: true
 env:
-  FIRMWARE_AUTHOR: TurBoTse
+  FIRMWARE_AUTHOR: Jay
   TOOLCHAIN_ROOT: toolchain/toolchain-mipsel
-  TOOLCHAIN_URL: https://github.com/TurBoTse/padavan/releases/download/toolchain
+  TOOLCHAIN_URL: https://github.com/Jay/padavan/releases/download/toolchain
 jobs:
   build:
     runs-on: ubuntu-latest
